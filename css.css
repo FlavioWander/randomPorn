@@ -1,0 +1,426 @@
+body,html{
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+	background-color: #eee;
+}
+
+
+
+@font-face {
+	font-family: "Segoe UI";
+	src: url(fonts/segoe-ui-light.ttf) format("truetype");
+}
+
+/*Id's*/
+#about{
+	padding-top: 30px;
+	padding-bottom: 4vh;
+	border: 0px;
+	margin: 0px;
+	background-color: #eeeeee;
+	margin: auto;
+ 	max-width:1100px;
+}
+
+#aboutIcon{
+	width: 360px;
+	padding-top: 5vh;
+}
+
+#contact{
+	margin: auto;
+	max-width: 1100px;
+}
+
+#contactContainer{
+	background-color: #303030;
+	padding-top: 5px;
+}
+
+#emailId{
+	text-decoration: none;
+	color: black;
+	font-weight: lighter;
+}
+
+
+
+@media screen and (min-width: 750px) {
+	#iconLogo{	
+		-webkit-transition: all  1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		transition: all 1s ease;
+	}
+
+	ul{
+		-webkit-transition: all  1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		transition: all 1s ease;
+	}
+}
+
+#logoImage{
+	z-index:1;
+	width:100vw;
+	padding: 30vh 10vw 0vh 10vw;
+	border: 0px;
+	margin: 0px;
+}
+
+#mainBackground{
+	width: 100vw;
+	height: 100vh;
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+	background-repeat:no-repeat;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	background-position:center;
+}
+
+#menuButton{
+	z-index: 99999;
+}
+
+#menuImg{	
+	float:left;
+	height:50px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	cursor: pointer;
+	position: center center;
+}
+
+/*Classes*/
+
+.aboutText{
+	z-index:1;
+	position: center;
+	margin: 4vh 3vw;
+	font-family: "Segoe UI";
+	font-weight: lighter;
+	font-size: 20px;
+}
+
+.accordion{
+	width: 100%;
+	max-width: 1080px;
+	height: 350px;
+	overflow: hidden;
+	margin: 50px auto;
+}
+
+.accordion ul {
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	margin: 0;
+	padding: 0;
+}
+
+.accordion ul li {
+	display: table-cell;
+	vertical-align: bottom;
+	position: relative;
+	width: 16.666%;
+	height: 350px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	transition: width 1s ease;
+}
+
+.accordion ul li div{
+	display: block;
+	width: 100%;
+}
+
+.accordion ul li div a {
+	display: block;
+	height: 350px;
+	width: 100%;
+	position: relative;
+	z-index: 3;
+	vertical-align: bottom;
+	padding: 15px 20px;
+	box-sizing: border-box;
+	color: #fff;
+	text-decoration: none;
+	font-family: "Segoe UI";
+	font-weight: lighter;
+	font-size: 24px;
+	text-align: center;
+}
+
+.accordion ul li div a img {
+	position:absolute;
+	left: 0;
+	bottom:0;
+	width: 100%;
+	padding:30px;
+	vertical-align:  bottom;
+}
+
+.accordion ul li div a p {
+	opacity: 0;
+	margin-top: 30px;
+	width: 100%;
+	text-overflow: ellipsis;
+	position: relative;
+	z-index: 5;
+	height: 75%;
+	-webkit-transform: translateX(-20px);
+	transform: translateX(-20px);
+	font-size: 24px;
+	text-align: left;
+}
+
+.accordion ul:hover li{ 
+	width: 8%;
+}
+
+@media screen and (min-width: 868px){
+	.accordion ul:hover li a{ 
+		/* Safari */
+		-webkit-transform: rotate(-90deg);
+		/* Firefox */
+		-moz-transform: rotate(-90deg);
+		/* IE */
+		-ms-transform: rotate(-90deg);
+		/* Opera */
+		-o-transform: rotate(-90deg);
+		/* Internet Explorer */
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+		width: 350px;
+
+	}
+
+	.accordion ul:hover li:hover a{ 
+		-webkit-transform: rotate(0deg);
+		/* Firefox */
+		-moz-transform: rotate(0deg);
+		/* IE */
+		-ms-transform: rotate(0deg);
+		/* Opera */
+		-o-transform: rotate(0deg);
+		/* Internet Explorer */
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+		width: 100%;
+	}
+}
+
+.accordion ul:hover li:hover { 
+	width: 60%; 
+}
+
+.accordion ul:hover li:hover a p {
+	opacity: 1;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+
+.accordion ul:hover li a img {
+	display:none;
+}
+
+@media screen and (max-width: 868px) {
+	.accordion ul li div a img {
+		display: none;
+	}	
+	.accordion ul li div a p {
+		overflow-y: scroll;
+	}
+	body { margin: 0; }
+	.accordion ul li div a{
+		height:65px;
+	}
+	.accordion ul li:hover div:hover a{
+		height:305px;
+	}
+	.accordion ul li,
+	.accordion ul li:hover,
+	.accordion ul:hover li,
+	.accordion ul:hover li:hover {
+		position: relative;
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		-webkit-transition: none;
+		transition: none;
+		height:65px;
+	}
+	.accordion { height: auto; }
+}
+
+@media only screen and (max-width: 390px) {
+   .accordion ul li div a { font-size: 5vw; }
+}
+.accordion ul li:nth-child(1) { background-color: rgba(0, 191, 255, 1); }
+.accordion ul li:nth-child(2) { background-color: rgba(0, 76, 153, 1); }
+.accordion ul li:nth-child(3) { background-color: rgba(25, 25, 112, 1); }
+.accordion ul li:nth-child(4) { background-color: rgba(255, 29, 29, 1); }
+.accordion ul li:nth-child(5) { background-color: rgba(255, 102, 0, 1); }
+
+.accordion ul:hover li:nth-child(1):hover a { 
+	background: rgba(0, 191, 255, 0.7);
+}
+
+.accordion ul:hover li:nth-child(1):hover div{ 
+	background-image: url("img/projBack.jpg");
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	background-position:center;
+}
+
+.accordion ul:hover li:nth-child(2):hover a { 
+	background: rgba(0, 76, 153, 0.7); 
+}
+
+.accordion ul:hover li:nth-child(2):hover div{ 
+	background-image: url("img/gestBack.jpg");
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	background-position:center;
+}
+
+.accordion ul:hover li:nth-child(3):hover a { 
+	background: rgba(25, 25, 112, 0.7); 
+}
+
+.accordion ul:hover li:nth-child(3):hover div{ 
+	background-image: url("img/admiBack.jpg");
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	background-position:center;
+}
+
+.accordion ul:hover li:nth-child(4):hover a { 
+	background: rgba(255, 29, 29, 0.7); 
+}
+
+.accordion ul:hover li:nth-child(4):hover div{ 
+	background-image: url("img/operBack.jpg");
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	background-position:center;
+}
+
+.accordion ul:hover li:nth-child(5):hover a { 
+	background: rgba(255, 102, 0, 0.7); 
+}
+
+.accordion ul:hover li:nth-child(5):hover div{ 
+	background-image: url("img/markBack.jpg");
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	background-position:center;
+}
+
+.bodyText{
+	z-index:1;
+	position: center;
+	padding-top: 5vh;
+	font-family: "Segoe UI";
+	font-size: 30px;
+	color:#fff;
+    text-shadow: 
+    0px 3px 5px #000,
+    0px -3px 5px #000,
+    3px 0px 5px #000,
+    -3px 0px 5px #000,    
+    3px 3px 5px #000,
+    -3px -3px 5px #000,
+    3px -3px 5px #000,
+    -3px 3px 5px #000;
+}
+
+.brandIconLogo{	
+	z-index:-9999;
+	height:200px;	
+	margin: 11px 11px 3px 11px;
+	float:left;
+	position: absolute;
+	left:-380px;
+	top: -150px;
+}
+
+.brandIconFull{
+	margin: 11px 11px 3px 11px;
+	float:left;
+	position: absolute;
+	left:0px;
+	top:0px;
+	height:36px;
+}
+
+.contact{
+	padding-top: 30px;
+	padding-bottom:30px;
+	border:0px;
+	background-color: #303030;
+}
+
+.contactInfo{
+	color: white;
+	line-height: 100px;
+	padding-left: 30px;
+}
+
+.contact img{
+	height:100px;
+}
+
+.contactText{
+	z-index:1;
+	position: center;
+	margin: 4vh 3vw;
+	font-family: "Segoe UI";
+	font-weight: lighter;
+	font-size: 20px;
+	color: #eee;
+}
+
+.contactTextTitle{
+	z-index:1;
+	position: center;
+	margin: 1vh 3vw 0vh;
+	font-family: "Segoe UI";
+	font-weight: lighter;
+	font-size: 20px;
+	color: #eee;
+}
+
+.equalHeight{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+
+.mainNavbarFull{
+	padding-left: 200px;
+}
+
+.mainNavbarLogo{
+	padding-left: 55px;
+}
+
+.row {
+    overflow: hidden; 
+}
